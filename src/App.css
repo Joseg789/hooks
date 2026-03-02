@@ -1,0 +1,130 @@
+#root {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to bottom right, #0f172a, #111827, #1e293b);
+}
+/* Contenedor principal */
+.container {
+  min-height: 100vh;
+  width: 80dvw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Wrapper del semáforo */
+.traffic-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Luces */
+.light {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+/* pulse*/
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+.pulse-panel {
+  animation: pulse 1s 1 forwards;
+}
+
+/* semaforo apagado*/
+.off {
+  background-color: #374151;
+}
+
+/* Colores */
+.red {
+  background-color: #ef4444;
+}
+
+.yellow {
+  background-color: #f59e0b;
+}
+
+.green {
+  background-color: #22c55e;
+}
+
+/* Grupo de botones */
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+/* Botones base */
+.btn {
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Botones por color */
+.btn-red {
+  background-color: #ef4444;
+}
+
+.btn-yellow {
+  background-color: #f59e0b;
+}
+
+.btn-green {
+  background-color: #22c55e;
+}
+
+.education-panel {
+  width: 1fr;
+  padding: 20px;
+  background: #111;
+  color: rgba(0, 255, 0, 0.856);
+  border-radius: 8px;
+  font-family: "monospace";
+  margin-left: 80px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  font-weight: bold;
+}
+.text-white {
+  color: white;
+}
+.text-green {
+  color: #0f0;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
